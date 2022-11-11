@@ -19,7 +19,7 @@ const Contact = () => {
       <div class="contact-content">
         <div class="contact-form">
           <div class="form-header">Message Me</div>
-          <form id="myForm" action="#">
+          <form name="contact" method="post" data-netlify="true">
             <div class="input-line">
               <input
                 id="name"
@@ -45,7 +45,7 @@ const Contact = () => {
               class="input-textarea"
               placeholder="message"
             ></textarea>
-            <button type="button" id="submit" value="send">
+            <button type="submit" id="submit" value="send">
               Submit
             </button>
           </form>
