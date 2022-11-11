@@ -1,15 +1,29 @@
-import { createSignal } from "solid-js";
+import { createSignal, For } from "solid-js";
 import gear from "../images/gear.png";
 
 const ColorChanger = () => {
   const [colorPanelClass, setColorPanelClass] =
     createSignal<string>("color-changer");
 
+  const changeColor = (color: string) => {
+    const stylesheet = document.createElement("link");
+    stylesheet.rel = "stylesheet";
+    stylesheet.href = `../css/color-${color}.css`;
+
+    document.head.appendChild(stylesheet);
+  };
+
   return (
     <div class={colorPanelClass()}>
       <div
         class="color-panel"
-        onClick={() => setColorPanelClass("color-changer-active")}
+        onClick={() =>
+          setColorPanelClass((prevColorPanelClass) =>
+            prevColorPanelClass === "color-changer"
+              ? "color-changer color-changer-active"
+              : "color-changer"
+          )
+        }
       >
         <img src={gear} alt="" />
       </div>
@@ -17,24 +31,17 @@ const ColorChanger = () => {
         <div class="heading">Custom Colors</div>
         <div class="colors">
           <ul>
-            <li>
-              <a href="#0" class="color-red" title="color-red"></a>
-            </li>
-            <li>
-              <a href="#0" class="color-purple" title="color-purple"></a>
-            </li>
-            <li>
-              <a href="#0" class="color-malt" title="color-malt"></a>
-            </li>
-            <li>
-              <a href="#0" class="color-green" title="color-green"></a>
-            </li>
-            <li>
-              <a href="#0" class="color-blue" title="color-blue"></a>
-            </li>
-            <li>
-              <a href="#0" class="color-orange" title="color-orange"></a>
-            </li>
+            <For each={["red", "purple", "malt", "green", "blue", "orange"]}>
+              {(color) => (
+                <li>
+                  <div
+                    class={`color-${color}`}
+                    title={`color-${color}`}
+                    onClick={() => changeColor(color)}
+                  ></div>
+                </li>
+              )}
+            </For>
           </ul>
         </div>
       </div>

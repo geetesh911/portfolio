@@ -14,9 +14,6 @@
     "@astrojs/solid-js": "^1.2.2",
     "astro": "^1.6.0",
     "gsap": "^3.11.3",
-    "particles.js": "^2.0.0",
-    "solid-js": "^1.4.3",
-    "tsparticles": "^2.5.3",
-    "tsparticles-engine": "^2.5.2"
+    "solid-js": "^1.4.3"
   }
 }

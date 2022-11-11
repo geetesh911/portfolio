@@ -1308,7 +1308,8 @@ form button:hover {
   position: relative;
   overflow: hidden;
 }
-.colors li a {
+.colors li div {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
@@ -1617,11 +1618,11 @@ For devices with smaller width like mobile phone
     box-shadow: 0px 0px 0px 0px #c70039;
   }
   .portfolio-image img {
-    height: 300px;
+    height: 200px;
     width: 100%;
   }
   .portfolio-image {
-    height: 300px;
+    height: 200px;
     width: 90%;
   }
   #navigation-bar img {
@@ -2333,7 +2334,7 @@ for tabs and large phones
 
 @media all and (max-width: 9000px) and (min-width: 1441px) {
   .portfolio-image img {
-    height: 500px;
+    height: 400px;
     width: 100%;
     position: relative;
   }
