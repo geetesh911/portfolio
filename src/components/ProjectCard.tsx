@@ -1,4 +1,4 @@
-import { Component, Show } from "solid-js";
+import { Component, For, Show } from "solid-js";
 
 export interface ProjectCardProps {
   image: string;
@@ -20,7 +20,7 @@ const ProjectCard: Component<ProjectCardProps> = ({
       </div>
       <div class="portfolio-text">
         <h2>{name}</h2>
-        <p>{description}</p>
+        <For each={description.split("\n")}>{(para) => <p>{para}</p>}</For>
         <Show when={link}>
           <div class="button">
             <a href={link}>

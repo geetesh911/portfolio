@@ -894,12 +894,12 @@ button:hover .index {
   text-align: center;
 }
 .portfolio-image img {
-  height: 400px;
+  height: auto;
   width: 100%;
   position: relative;
 }
 .portfolio-image {
-  height: 400px;
+  height: auto;
   width: 40%;
 }
 .portfolio-image img::before {
@@ -1618,11 +1618,11 @@ For devices with smaller width like mobile phone
     box-shadow: 0px 0px 0px 0px #c70039;
   }
   .portfolio-image img {
-    height: 200px;
+    height: auto;
     width: 100%;
   }
   .portfolio-image {
-    height: 200px;
+    height: auto;
     width: 90%;
   }
   #navigation-bar img {
@@ -2112,12 +2112,12 @@ for tabs and large phones
     box-shadow: 0px 0px 0px 0px #c70039;
   }
   .portfolio-image img {
-    height: 380px;
+    height: auto;
     width: 100%;
     position: relative;
   }
   .portfolio-image {
-    height: 380px;
+    height: auto;
     width: 70%;
   }
   #navigation-bar img {
@@ -2334,12 +2334,12 @@ for tabs and large phones
 
 @media all and (max-width: 9000px) and (min-width: 1441px) {
   .portfolio-image img {
-    height: 400px;
+    height: auto;
     width: 100%;
     position: relative;
   }
   .portfolio-image {
-    height: 500px;
+    height: auto;
     width: 40%;
   }
   .about-img img {
