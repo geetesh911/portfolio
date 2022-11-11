@@ -4,7 +4,7 @@ import logo from "../images/logo.png";
 const NavigationBar = () => {
   return (
     <div id="navigation-bar">
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" height={50} />
       <div
         class="menubar"
         onClick={() => gsap.to("#navigation-content", 0.6, { y: 0 })}

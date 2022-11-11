@@ -196,7 +196,7 @@ body {
   transform: rotate(90deg);
 }
 .logo img {
-  height: 80px;
+  height: 50px;
   position: absolute;
   top: 3%;
   left: 2.5%;
@@ -210,7 +210,7 @@ body {
   transform: rotate(-45deg);
 }
 #navigation-bar img {
-  height: 80px;
+  height: 50px;
   position: absolute;
   top: 15%;
   left: 2.5%;
@@ -1626,7 +1626,7 @@ For devices with smaller width like mobile phone
     width: 90%;
   }
   #navigation-bar img {
-    height: 80px;
+    height: 50px;
     position: absolute;
     top: 15%;
     left: 2.5%;
@@ -2121,7 +2121,7 @@ for tabs and large phones
     width: 70%;
   }
   #navigation-bar img {
-    height: 80px;
+    height: 50px;
     position: absolute;
     top: 15%;
     left: 2.5%;

@@ -19,7 +19,7 @@ const NavigationContent = () => {
   return (
     <div id="navigation-content">
       <div class="logo">
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" height={50} />
       </div>
       <div
         class="navigation-close"

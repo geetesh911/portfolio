@@ -1,7 +1,7 @@
 [
   {
     "name": "Incoguzz",
-    "description": "Using the social media app Incoguzz, you may chat with random users and post images, videos, audio, and text. You can connect with people randomly or you can connect with specific people using their username. In the same format, I also intend to include audio and video calls. I have developed a mono repository that includes a server (the app's backend), a mobile app, and other standard tools. \n\nFor the server, I used express, apollo graphql, mysql, and other tools. I designed the entire authentication process, which includes registration, login, password recovery, verification, and more. I used cloudinary for storage. Sendinblue for email, FFMPEG for audio extraction and video compression, sharp for image optimization, agenda for cron jobs, and many other libraries\n \nI used react native for my mobile app. I used apollo-client to communicate with the graphql API, redux to manage state, react-video to create a video player, and a variety of other libraries.\n\nTo set up a monorepo, I used turborepo.",
+    "description": "Using the social media app Incoguzz, you may chat with random users and post images, videos, audio, and text. You can connect with people randomly or you can connect with specific people using their username. In the same format, I also intend to include audio and video calls. I have developed a mono repository that includes a server (the app's backend), a mobile app, and other standard tools. \nFor the server, I used express, apollo graphql, mysql, and other tools. I designed the entire authentication process, which includes registration, login, password recovery, verification, and more. I used cloudinary for storage. Sendinblue for email, FFMPEG for audio extraction and video compression, sharp for image optimization, agenda for cron jobs, and many other libraries\n \nI used react native for my mobile app. I used apollo-client to communicate with the graphql API, redux to manage state, react-video to create a video player, and a variety of other libraries.\nTo set up a monorepo, I used turborepo.",
     "link": "https://github.com/geetesh911/incoguzz",
     "image": "https://i.imgur.com/qNY7P4f.jpg"
   },
@@ -15,5 +15,11 @@
     "name": "Neerajkaffewala",
     "description": "This is a food blogging website where users can read blogs, find recipes, and view images posted by the author.\nFor the front-end, I used ReactJS to create a user interface for users to visit and consume the author's content. and also built an admin panel for the author to manage all of the website's content.\nFor the backend, I used NodeJS and MySQL to build all of the APIs for user-side content as well as the admin panel with proper authorization.",
     "image": "https://i.ibb.co/PCbPygq/neerajkaffewala-desktop.jpg"
+  },
+  {
+    "name": "Portfolio Website",
+    "description": "I made this portfolio website to better describe myself and to experiment with new technologies.\nTo build this site, I used Astro with SolidJS as an integration.",
+    "link": "https://geeteshladdha.netlify.app/",
+    "image": "https://i.imgur.com/jcpD8Lg.jpg"
   }
 ]

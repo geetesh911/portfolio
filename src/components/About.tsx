@@ -29,7 +29,7 @@ const About = () => {
               related projects.
             </span>
             <div class="cv">
-              <a href="#">
+              <a href="https://drive.google.com/uc?export=download&id=1s5jvb7Cd3yDkjUbuGcTh7_GPynye1m4E">
                 <button>
                   Download <span class="colors">CV</span>
                 </button>
