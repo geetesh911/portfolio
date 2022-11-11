@@ -26,12 +26,14 @@ const Contact = () => {
                 type="text"
                 placeholder="Name"
                 class="input-name"
+                name="name"
               />
               <input
                 id="email"
                 type="email"
                 placeholder="Email"
                 class="input-name"
+                name="email"
               />
             </div>
             <input
@@ -39,11 +41,13 @@ const Contact = () => {
               id="subject"
               placeholder="subject"
               class="input-subject"
+              name="subject"
             />
             <textarea
               id="body"
               class="input-textarea"
               placeholder="message"
+              name="message"
             ></textarea>
             <button type="submit" id="submit" value="send">
               Submit
