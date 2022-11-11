@@ -18,7 +18,7 @@
   },
   {
     "name": "Portfolio Website",
-    "description": "I made this portfolio website to better describe myself and to experiment with new technologies.\nTo build this site, I used Astro with SolidJS as an integration.",
+    "description": "I made this portfolio website to better describe myself and to experiment with new technologies.\nTo build this site, I used Astro with SolidJS as an integration and I used Netlify forms  to submit the contact form.",
     "link": "https://geeteshladdha.netlify.app/",
     "image": "https://i.imgur.com/jcpD8Lg.jpg"
   }
