@@ -16,7 +16,7 @@ const ProjectCard: Component<ProjectCardProps> = ({
   return (
     <div class="portfolio">
       <div class="portfolio-image">
-        <img src={image} alt="project-image" />
+        <img src={image} alt="project-image" width="100%" height="auto" />
       </div>
       <div class="portfolio-text">
         <h2>{name}</h2>

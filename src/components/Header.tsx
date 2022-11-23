@@ -11,13 +11,31 @@ const Header = () => {
 
       <div class="social-media-links">
         <a href="https://github.com/geetesh911">
-          <img src={github} class="social-media" alt="github-logo" />
+          <img
+            src={github}
+            class="social-media"
+            alt="github-logo"
+            height={21}
+            width={21}
+          />
         </a>
         <a href="https://www.linkedin.com/in/geetesh-laddha/">
-          <img src={linkedin} class="social-media" alt="linkedin-logo" />
+          <img
+            src={linkedin}
+            class="social-media"
+            alt="linkedin-logo"
+            height={21}
+            width={21}
+          />
         </a>
         <a href="https://www.hackerrank.com/geetesh911">
-          <img src={hackerrank} class="social-media" alt="hackerrank-logo" />
+          <img
+            src={hackerrank}
+            class="social-media"
+            alt="hackerrank-logo"
+            height={21}
+            width={21}
+          />
         </a>
       </div>
       <div class="header-content">
@@ -36,10 +54,22 @@ const Header = () => {
           </div>
           <div class="contact">
             <a href="Mailto:geetesh911@gmail.com">
-              <img src={mail} alt="email-pic" class="contactpic" />
+              <img
+                src={mail}
+                alt="email-pic"
+                class="contactpic"
+                height={30}
+                width={30}
+              />
             </a>
             <a href="Tel:+919521542026">
-              <img src={call} alt="phone-pic" class="contactpic" />
+              <img
+                src={call}
+                alt="phone-pic"
+                class="contactpic"
+                height={30}
+                width={30}
+              />
             </a>
           </div>
         </div>

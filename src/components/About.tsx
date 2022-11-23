@@ -1,5 +1,5 @@
 import ColorChanger from "./ColorChanger";
-import about from "../images/about.jpg";
+import about from "../images/about.webp";
 
 const About = () => {
   return (

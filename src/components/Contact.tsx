@@ -3,7 +3,6 @@ import name from "../images/icon-name.png";
 import location from "../images/icon-location.png";
 import phone from "../images/icon-phone.png";
 import email from "../images/icon-email.png";
-import instagram from "../images/instagram.png";
 
 const Contact = () => {
   return (
@@ -59,14 +58,26 @@ const Contact = () => {
           <div class="contact-info-header">Contact Info</div>
           <div class="contact-info-content">
             <div class="contect-info-content-line">
-              <img src={name} class="icon" alt="name-icon" />
+              <img
+                src={name}
+                class="icon"
+                alt="name-icon"
+                height={40}
+                width={40}
+              />
               <div class="contact-info-icon-text">
                 <h6>Name</h6>
                 <p>Geetesh Laddha</p>
               </div>
             </div>
             <div class="contect-info-content-line">
-              <img src={location} class="icon" alt="location-icon" />
+              <img
+                src={location}
+                class="icon"
+                alt="location-icon"
+                height={40}
+                width={40}
+              />
               <div class="contact-info-icon-text">
                 <h6>Address</h6>
                 <p>
@@ -76,7 +87,13 @@ const Contact = () => {
               </div>
             </div>
             <div class="contect-info-content-line">
-              <img src={phone} class="icon" alt="phone-icon" />
+              <img
+                src={phone}
+                class="icon"
+                alt="phone-icon"
+                height={40}
+                width={40}
+              />
               <div class="contact-info-icon-text">
                 <h6>Call</h6>
                 <p>+91 9521542026</p>
@@ -84,7 +101,13 @@ const Contact = () => {
             </div>
 
             <div class="contect-info-content-line">
-              <img src={email} class="icon" alt="email-icon" />
+              <img
+                src={email}
+                class="icon"
+                alt="email-icon"
+                height={40}
+                width={40}
+              />
               <div class="contact-info-icon-text">
                 <h6>Email</h6>
                 <p>geetesh911@gmail.com</p>

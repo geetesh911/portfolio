@@ -25,7 +25,7 @@ const ColorChanger = () => {
           )
         }
       >
-        <img src={gear} alt="" />
+        <img src={gear} alt="" height={40} width={40} />
       </div>
       <div class="color-selector">
         <div class="heading">Custom Colors</div>
