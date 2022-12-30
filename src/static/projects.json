@@ -1,9 +1,19 @@
 [
   {
+    "name": "PillarPlus (previous company)",
+    "description": "I have written several modules and algorithms at PillarPlus to solve complex MEP problems. I've also worked with several libraries that deal with geometry, graph and canvas to provide users with a real-time experience. At Towercop (a PillarPlus subsidiary), I worked on complex forms designs, form builder, data structuring, analytics, and other related things.\nI've also held leadership positions and played an important role in the coordination and management of the team, as well as provided insights into the codes, logics, and architecture of both the applications of the company.",
+    "image": "https://i.ibb.co/cbZQWbs/Pillar-Plus-Work.png"
+  },
+  {
     "name": "Incoguzz",
     "description": "Using the social media app Incoguzz, you may chat with random users and post images, videos, audio, and text. You can connect with people randomly or you can connect with specific people using their username. In the same format, I also intend to include audio and video calls. I have developed a mono repository that includes a server (the app's backend), a mobile app, and other standard tools. \nFor the server, I used express, apollo graphql, mysql, and other tools. I designed the entire authentication process, which includes registration, login, password recovery, verification, and more. I used cloudinary for storage. Sendinblue for email, FFMPEG for audio extraction and video compression, sharp for image optimization, agenda for cron jobs, and many other libraries\nI used react native for my mobile app. I used apollo-client to communicate with the graphql API, redux to manage state, react-video to create a video player, and a variety of other libraries.\nTo set up a monorepo, I used turborepo.",
     "link": "https://github.com/geetesh911/incoguzz",
     "image": "https://i.ibb.co/HdB1ggd/incoguzz.jpg"
+  },
+  {
+    "name": "Vivienth",
+    "description": "My freelancing project for a medical start-up was called Vivienth.\nI created the entire authentication and authorisation system, which includes several user roles like admin, doctor, etc. I created the APIs to pull information from their chatbot, store it in the database, create doctor users, make reports, build symptoms to display in the chatbot, accept or reject patients, and many other features. I created the entire dashboard for the administrators as well as for the doctors.\nThis project's technology stack included express, postgresql, prisma, nextjs, react-query, redux, and numerous more tools and technologies.",
+    "image": "https://i.ibb.co/ydQzVtL/image.png"
   },
   {
     "name": "Moodymoods",

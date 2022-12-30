@@ -48,10 +48,15 @@ const Header = () => {
             <span
               class="txt-rotate color"
               data-period="1200"
-              data-rotate='[ "Web Developer.", "Full stack JavaScript Developer.", "Freelancer." ]'
+              data-rotate='[ "Web Developer.", "Full stack JavaScript Developer.", "MERN stack develooper."]'
             ></span>
             <span class="slash">|</span>
           </div>
+          <form onSubmit={(e) => e.preventDefault()} class="project-button">
+            <button onClick={() => location.replace(`/projects`)}>
+              My Projects
+            </button>
+          </form>
           <div class="contact">
             <a href="Mailto:geetesh911@gmail.com">
               <img

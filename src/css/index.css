@@ -41,6 +41,10 @@ input[type="number"] {
 html {
   background: #101010;
 }
+/* html a {
+  text-decoration: none;
+  color: white;
+} */
 #loader {
   display: flex;
   align-items: center;
@@ -659,6 +663,16 @@ body {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills-content ul {
+  display: inline-block;
+}
+.skills-content ul li{
+  color: white;
+  line-height: 2em;
 }
 .skill-item {
   height: 120px;

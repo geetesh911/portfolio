@@ -11,8 +11,10 @@ const Skills = () => {
         My <span class="color"> Skills</span>
       </div>
 
-      <div class="skills-content " style="text-align: center;">
-        <For each={skills()}>{(skill, i) => <Skill {...skill} />}</For>
+      <div class="skills-content">
+        <ul>
+          <For each={skills()}>{(skill) => <Skill {...skill} />}</For>
+        </ul>
       </div>
     </div>
   );

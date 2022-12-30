@@ -1,25 +1,15 @@
 import type { Component } from "solid-js";
 
 export interface SkillProps {
-  name: string;
-  percent: number;
+  skills: string[];
+  categoryName: string;
 }
 
-const Skill: Component<SkillProps> = ({ name, percent }) => {
+const Skill: Component<SkillProps> = ({ skills, categoryName }) => {
   return (
-    <div class="skill-html skill">
-      <div class="skill-text">
-        <div class="html">{name}</div>
-      </div>
-      <div class="html-prog wow prog">
-        <div
-          class="html-progress wow"
-          style={{ width: `${percent}% !important` }}
-        >
-          {percent}%
-        </div>
-      </div>
-    </div>
+    <li>
+      <b>{categoryName}</b> - {skills.join(", ")}
+    </li>
   );
 };
 
