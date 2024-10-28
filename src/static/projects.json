@@ -1,5 +1,10 @@
 [
   {
+    "name": "4Medica (client) (previous company)",
+    "description": "Developed healthcare applications using Typescript, React.js, Node.js/NestJS, MongoDB, FHIR, Elasticsearch, Kafka, gRPC, Redis, and Angular.\nBuilt lab order management system connecting healthcare providers, facilities, and patients.\nImplemented patient data management system across multiple applications.\nDeveloped user and organization management solutions for healthcare platforms",
+    "image": "https://i.ibb.co/cbZQWbs/Pillar-Plus-Work.png"
+  },
+  {
     "name": "PillarPlus (previous company)",
     "description": "I have written several modules and algorithms at PillarPlus to solve complex MEP problems. I've also worked with several libraries that deal with geometry, graph and canvas to provide users with a real-time experience. At Towercop (a PillarPlus subsidiary), I worked on complex forms designs, form builder, data structuring, analytics, and other related things.\nI've also held leadership positions and played an important role in the coordination and management of the team, as well as provided insights into the codes, logics, and architecture of both the applications of the company.",
     "image": "https://i.ibb.co/cbZQWbs/Pillar-Plus-Work.png"
