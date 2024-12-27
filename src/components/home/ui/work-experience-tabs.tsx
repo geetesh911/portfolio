@@ -5,7 +5,7 @@ export const WorkExperienceTabs = () => {
     return (
         <Tabs
             defaultValue={about.workExperience[0].name}
-            className="mx-auto mt-20 w-full max-w-2xl"
+            className="mx-auto mt-10 w-full max-w-2xl md:mt-20"
         >
             <div className="flex flex-col md:flex-row md:space-x-8">
                 {/* Tabs container */}
