@@ -1,8 +1,21 @@
 ---
-import Projects from "../components/Projects";
-import Layout from "../layouts/Layout.astro";
+import Layout from '@/layouts/layout.astro';
+import ProjectsComponents from '@/components/projects/index.astro';
+import { SEO } from 'astro-seo';
 ---
 
-<Layout title="Projects">
-  <Projects client:load />
+<Layout>
+    <SEO
+        slot="seo"
+        title={'Projects - Geetesh Laddha'}
+        description={'Projects created by Geetesh Laddha'}
+        openGraph={{
+            basic: {
+                title: 'Projects - Geetesh Laddha',
+                type: 'Website',
+                image: `${import.meta.env.SITE}/avatar.jpg`,
+            },
+        }}
+    />
+    <ProjectsComponents />
 </Layout>

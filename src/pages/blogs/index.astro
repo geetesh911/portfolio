@@ -1,0 +1,21 @@
+---
+import Layout from '@/layouts/layout.astro';
+import BlogComponents from '@/components/blogs/index.astro';
+import { SEO } from 'astro-seo';
+---
+
+<Layout>
+    <SEO
+        slot="seo"
+        title={'Blogs - Geetesh Laddha'}
+        description={'Blogs published by Geetesh Laddha'}
+        openGraph={{
+            basic: {
+                title: 'Blogs - Geetesh Laddha',
+                type: 'Website',
+                image: `${import.meta.env.SITE}/avatar.jpg`,
+            },
+        }}
+    />
+    <BlogComponents />
+</Layout>

@@ -1,0 +1,83 @@
+{
+    "name": "Geetesh Laddha",
+    "intro": "I specialize in crafting high-quality web applications using modern technologies. I am passionate about building scalable and maintainable software solutions that deliver exceptional user experiences.",
+    "description": [
+        "As a seasoned full-stack JavaScript developer, I bring over 5 years of hands-on experience in crafting innovative and robust web solutions. With a deep passion for technology and a proven track record of delivering high-quality products, I excel in leveraging a diverse skill set to tackle complex challenges"
+    ],
+    "socialLinks": {
+        "github": "https://github.com/geetesh911",
+        "linkedin": "https://www.linkedin.com/in/geetesh-laddha/",
+        "twitter": "https://x.com/geetesh_911"
+    },
+    "hardware": [
+        {
+            "name": "13 inch M3 MacBook Air",
+            "description": "My main machine for development that I've been using for over 6 months now. Such a beast of a machine. I love it."
+        },
+        {
+            "name": "OnePlus 9R",
+            "description": "My main phone for development. I love the performance."
+        },
+        {
+            "name": "Keychron K4 Pro",
+            "description": "My main keyboard for development. I love the clicky keys and the compact size. "
+        },
+        {
+            "name": "Samsung 27 inch 2k Monitor",
+            "description": "My main monitor for development. I love the color accuracy and the size."
+        }
+    ],
+    "workExperience": [
+        {
+            "name": "Nabis",
+            "logo": "/images/logos/apple.png",
+            "period": "Nov 2024 - Present",
+            "location": "Remote",
+            "role": "Senior Software Engineer",
+            "achievements": [
+                "Worked on the core team that built the compliance and logistics platform for cannabis distribution",
+                "Solved complex problems related to inventory management, order processing, and compliance reporting",
+                "Developed scalable solutions using Typescript, React.js, Node.js, NestJS, MongoDB, Elasticsearch, Kafka, gRPC, Redis, and Angular"
+            ]
+        },
+        {
+            "name": "Sorice Solutions",
+            "logo": "/images/logos/apple.png",
+            "period": "Jan 2023 - Nov 2024",
+            "location": "Remote",
+            "role": "Senior Software Engineer",
+            "achievements": [
+                "Developed healthcare applications using Typescript, React.js, Node.js/NestJS, MongoDB, FHIR, Elasticsearch, Kafka, gRPC, Redis, and Angular",
+                "Built lab order management system connecting healthcare providers, facilities, and patients",
+                "Implemented patient data management system across multiple applications",
+                "Developed user and organization management solutions for healthcare platforms"
+            ]
+        },
+        {
+            "name": "PillarPlus",
+            "logo": "/images/logos/apple.png",
+            "period": "July 2020 - Dec 2022",
+            "location": "Remote",
+            "role": "Full Stack JavaScript Developer",
+            "achievements": [
+                "Developed algorithms for complex MEP (Mechanical, Electrical, Plumbing) solutions using Typescript, React.js, Next.js, Node.js, Postgres, MongoDB, Redis and ",
+                "Implemented real-time geometry and graphics solutions using graph and canvas libraries",
+                "Designed complex form builders and analytics systems at Towercop",
+                "Led development teams and provided architectural guidance for multiple applications",
+                "Managed code quality and technical decision-making across projects"
+            ]
+        },
+        {
+            "name": "Freelance",
+            "logo": "/images/logos/apple.png",
+            "period": "Nov 2019 - July 2020",
+            "location": "Remote",
+            "role": "Senior Software Engineer",
+            "achievements": [
+                "Developed MVPs using Node.js, React.js, NestJS, and PostgreSQL stack",
+                "Built scalable applications that accelerated business funding rounds",
+                "Implemented rapid go-to-market solutions enabling faster customer acquisition"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import SocialLinks from './ui/social-links.astro';
+import AvatarImage from '@/assets/avatar.jpg';
+---
+
+<div class="border-t border-slate-900/5 py-10 max-w-6xl mx-auto px-8">
+    <div class="flex flex-col justify-center items-center py-10">
+        <a class="font-bold flex items-center justify-center space-x-2 text-white text-xl" href="/">
+            <Image
+                class={'transition duration-500 blur-0 scale-100 rounded-full'}
+                src={AvatarImage}
+                alt="Avatar"
+                loading={'lazy'}
+                width={30}
+                height={30}
+            />
+            <span class="font-inter font-bold text-white text-xl">Geetesh Laddha</span>
+        </a>
+        <SocialLinks />
+    </div>
+</div>

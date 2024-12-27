@@ -1,0 +1,52 @@
+---
+import TimelineYear from './timeline-year.section.astro';
+
+const timelineData = {
+    2020: [
+        "Building a new startup, this time it's going to be a big one",
+        'Started writing blogs as a daily habit. Won the nobel prize for literature',
+        "My brother went on to pursue a career in music, he's now a famous singer",
+    ],
+    2021: [
+        "Building a new startup, this time it's going to be a big one",
+        'Started writing blogs as a daily habit. Won the nobel prize for literature',
+        "My brother went on to pursue a career in music, he's now a famous singer",
+    ],
+    2022: [
+        "Building a new startup, this time it's going to be a big one",
+        'Started writing blogs as a daily habit. Won the nobel prize for literature',
+        "My brother went on to pursue a career in music, he's now a famous singer",
+    ],
+    2023: [
+        "Building a new startup, this time it's going to be a big one",
+        'Started writing blogs as a daily habit. Won the nobel prize for literature',
+        "My brother went on to pursue a career in music, he's now a famous singer",
+    ],
+    2024: [
+        "Building a new startup, this time it's going to be a big one",
+        'Started writing blogs as a daily habit. Won the nobel prize for literature',
+        "My brother went on to pursue a career in music, he's now a famous singer",
+    ],
+};
+---
+
+<div class="max-w-5xl mx-auto px-8 mt-10 relative">
+    <p class="text-zinc-400 text-sm md:text-base mt-8 md:leading-loose tracking-wide">
+        Here's a timeline of what I've been upto
+    </p>
+    <div class="max-w-3xl mx-auto divide-zinc-800 relative">
+        <div
+            class="absolute h-full w-[4px] bg-gradient-to-b from-transparent via-cyan-500 to:transparent -left-4 md:-left-10"
+        >
+            <span
+                class="absolute z-20 h-[0.1rem] w-[0.1rem] rounded-[9999px] bg-blue-700 shadow-[0_0_0_1px_#ffffff10] rotate-[180deg] before:bg-gradient-to-l before:from-transparent before:via-blue-500 before:to-cyan-500 style_meteor__iBwXl left-1"
+                style="visibility: visible; --meteor-delay: 1s; --meteor-duration: 2s; --meteor-width: 136px;"
+            ></span>
+        </div>
+        {
+            Object.entries(timelineData)
+                .sort(([yearA], [yearB]) => +yearB - +yearA)
+                .map(([year, events]) => <TimelineYear year={year} events={events} />)
+        }
+    </div>
+</div>

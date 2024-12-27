@@ -1,0 +1,37 @@
+@tailwind base;
+
+@layer base {
+    h1 {
+        @apply mt-8 text-3xl font-semibold leading-[3rem];
+    }
+    h2 {
+        @apply mt-6 text-2xl font-semibold leading-10;
+    }
+    h3 {
+        @apply mt-4 text-xl font-semibold leading-10;
+    }
+    p {
+        @apply mt-4 text-base leading-7 text-zinc-300;
+    }
+    pre {
+        @apply mt-4 rounded-lg bg-card p-4 text-card-foreground;
+    }
+    ul {
+        @apply list-disc pl-5;
+    }
+    ol {
+        @apply list-decimal pl-5;
+    }
+    li {
+        @apply ml-5 mt-2 text-zinc-300;
+    }
+    strong {
+        @apply text-zinc-200;
+    }
+    code {
+        @apply rounded-md bg-card px-2 py-1;
+    }
+    pre code {
+        @apply bg-transparent;
+    }
+}

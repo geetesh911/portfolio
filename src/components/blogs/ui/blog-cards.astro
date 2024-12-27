@@ -1,0 +1,12 @@
+---
+import BlogCard from './blog-card.astro';
+import { getCollection } from 'astro:content';
+
+const allBlogs = (await getCollection('blog')).sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<div class="flex max-w-3xl flex-col space-y-16">
+    {allBlogs.map((blog) => <BlogCard blog={blog} />)}
+</div>
