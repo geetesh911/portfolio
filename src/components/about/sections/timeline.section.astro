@@ -1,0 +1,53 @@
+---
+import TimelineYear from './timeline-year.section.astro';
+
+const timelineData = {
+    2020: [
+        'Was working as a freelancer for some time, building websites for clients',
+        'Starting up my journey in a startup named PillarPlus',
+        'Learning mathematics as well coding at the same time to solve the problems for the startup',
+    ],
+    2021: [
+        "Leading the team at PillarPlus, we're growing at a fast pace",
+        'Explored geometric and 3d libraries to build the product',
+        'Learning about electric and mechanical engineering to build the product',
+    ],
+    2022: [
+        'Shifted to a new product (Towercop) for construction for the same startup',
+        'Met some of the best people to work with and learn from',
+        'Started learning about the stock market and investing, meanwhile building and learning new technologies',
+    ],
+    2023: [
+        'Changed the company, this time into healthcare',
+        'Learned about microservice archeitecture and creating scablable feature designs',
+        'Meanwhile, building and learning things in parallel',
+    ],
+    2024: [
+        'Started to build on an idea of my own',
+        'Switched to a new company, this time into the ecommerce sector',
+        'Launched 3 open-source libraries',
+        'Started to write blogs and share my knowledge with the community',
+    ],
+};
+---
+
+<div class="max-w-5xl mx-auto px-8 mt-10 relative">
+    <p class="text-zinc-400 text-sm md:text-base mt-8 md:leading-loose tracking-wide">
+        Here's a timeline of what I've been upto
+    </p>
+    <div class="max-w-3xl mx-auto divide-zinc-800 relative">
+        <div
+            class="absolute h-full w-[4px] bg-gradient-to-b from-transparent via-cyan-500 to:transparent -left-4 md:-left-10"
+        >
+            <span
+                class="absolute z-20 h-[0.1rem] w-[0.1rem] rounded-[9999px] bg-blue-700 shadow-[0_0_0_1px_#ffffff10] rotate-[180deg] before:bg-gradient-to-l before:from-transparent before:via-blue-500 before:to-cyan-500 style_meteor__iBwXl left-1"
+                style="visibility: visible; --meteor-delay: 1s; --meteor-duration: 2s; --meteor-width: 136px;"
+            ></span>
+        </div>
+        {
+            Object.entries(timelineData)
+                .sort(([yearA], [yearB]) => +yearB - +yearA)
+                .map(([year, events]) => <TimelineYear year={year} events={events} />)
+        }
+    </div>
+</div>

@@ -1,0 +1,12 @@
+[
+    {
+        "title": "prisma-to-drizzle-query-transformer",
+        "description": "The PrismaToDrizzleTransformer is a utility that transforms Prisma query objects into Drizzle ORM query objects.",
+        "links": {
+            "github": "https://github.com/geetesh911/prisma-helpers",
+            "npm": "https://www.npmjs.com/package/@geetesh911/prisma-to-drizzle-query-transformer"
+        },
+        "forks": "0",
+        "stars": "1"
+    }
+]

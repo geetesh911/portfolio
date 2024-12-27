@@ -1,0 +1,119 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '@/layouts/layout.astro';
+import { blogWebsite, getArticleSchema } from 'structuredData';
+import { SEO } from 'astro-seo';
+import '@/styles/markdown.css';
+
+interface Props {
+    blog: CollectionEntry<'blog'>;
+}
+
+export async function getStaticPaths() {
+    const blogPosts = await getCollection('blog');
+
+    return blogPosts.map((blog) => ({
+        params: { slug: blog.id },
+        props: { blog },
+    }));
+}
+
+export const prerender = true;
+
+const { blog } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(blog);
+
+const articleStructuredData = getArticleSchema(blog);
+
+const breadcrumbsStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+        {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Blog',
+            item: `${import.meta.env.SITE}/blogs/`,
+        },
+        {
+            '@type': 'ListItem',
+            position: 2,
+            name: blog.data.title,
+            item: `${import.meta.env.SITE}/blogs/${blog.id}/`,
+        },
+    ],
+};
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [articleStructuredData, breadcrumbsStructuredData, blogWebsite],
+};
+---
+
+<Layout>
+    <SEO
+        slot="seo"
+        title={blog.data.title}
+        description={blog.data.description}
+        openGraph={{
+            basic: {
+                title: blog.data.title,
+                type: 'Article',
+                image: `${import.meta.env.SITE}/_image?href=${blog.data.cover.src}&h=208&f=${blog.data.cover.format}`,
+            },
+            article: {
+                publishedTime: blog.data.date.toISOString(),
+                modifiedTime: blog.data.date.toISOString(),
+                authors: [blog.data.author],
+                section: 'E-Commerce',
+                tags: blog.data.tags,
+            },
+        }}
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <div class="xl:relative md:mt-20 p-8">
+        <div class="max-w-2xl mx-auto">
+            <article>
+                <header class="flex flex-col">
+                    <time
+                        datetime={blog.data.date.toDateString()}
+                        class="order-first flex items-center text-base text-zinc-400"
+                    >
+                        <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span>
+                        <span class="ml-3">
+                            {
+                                blog.data.date.toLocaleDateString('en-US', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric',
+                                })
+                            }
+                        </span>
+                        <span class="mx-4 bg-zinc-400 h-1 w-1 rounded-full"></span>
+                        <span class="rounded-full text-zinc-400">
+                            {`${remarkPluginFrontmatter?.readingTime} minutes read`}
+                        </span>
+                    </time>
+
+                    <h1
+                        class="mt-6 text-4xl font-bold tracking-tight text-zinc-200 sm:text-5xl !leading-[3.5rem]"
+                    >
+                        {blog.data.title}
+                    </h1>
+                    <div class="mt-6 flex items-center">
+                        <Image
+                            class="rounded-xl my-6"
+                            src={blog.data.cover}
+                            alt={blog.data.title}
+                            width={672}
+                            height={378}
+                        />
+                    </div>
+                </header>
+
+                <Content />
+            </article>
+        </div>
+    </div>
+</Layout>

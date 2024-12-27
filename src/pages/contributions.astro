@@ -1,0 +1,21 @@
+---
+import Layout from '@/layouts/layout.astro';
+import ContributionComponents from '@/components/contributions/index.astro';
+import { SEO } from 'astro-seo';
+---
+
+<Layout>
+    <SEO
+        slot="seo"
+        title={'Contributions - Geetesh Laddha'}
+        description={'OPen source contributions - Geetesh Laddha'}
+        openGraph={{
+            basic: {
+                title: 'Contributions - Geetesh Laddha',
+                type: 'Website',
+                image: `${import.meta.env.SITE}/avatar.jpg`,
+            },
+        }}
+    />
+    <ContributionComponents />
+</Layout>

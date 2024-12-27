@@ -1,0 +1,67 @@
+[
+    {
+        "title": "4Medica",
+        "description": "Developed healthcare applications using Typescript, React.js, Node.js/NestJS, MongoDB, FHIR, Elasticsearch, Kafka, gRPC, Redis, and Angular. Built lab order management system connecting healthcare providers, facilities, and patients. Implemented patient data management system across multiple applications. Developed user and organization management solutions for healthcare platforms",
+        "link": "https://github.com/geetesh911/incoguzz",
+        "img": "/projects/4medica.webp",
+        "technologies": [
+            "Angular",
+            "Node.js",
+            "NestJS",
+            "MongoDB",
+            "Elastic Search",
+            "Kafka",
+            "FHIR",
+            "TypeScript"
+        ]
+    },
+    {
+        "title": "PillarPlus",
+        "description": "I have written several modules and algorithms at PillarPlus to solve complex MEP problems. I've also worked with several libraries that deal with geometry, graph and canvas to provide users with a real-time experience. At Towercop (a PillarPlus subsidiary), I worked on complex forms designs, form builder, data structuring, analytics, and other related things.",
+        "link": "https://github.com/geetesh911/incoguzz",
+        "img": "/projects/pillarplus.webp",
+        "technologies": [
+            "React Native",
+            "Node.js",
+            "NestJS",
+            "PostgreSQL",
+            "TypeScript"
+        ]
+    },
+    {
+        "title": "Incoguzz",
+        "description": "Using the social media app Incoguzz, you may chat with random users and post images, videos, audio, and text. You can connect with people randomly or you can connect with specific people using their username. In the same format, I also intend to include audio and video calls.",
+        "link": "https://github.com/geetesh911/incoguzz",
+        "img": "/projects/incoguzz.webp",
+        "technologies": [
+            "React Native",
+            "Node.js",
+            "NestJS",
+            "PostgreSQL",
+            "TypeScript"
+        ]
+    },
+    {
+        "title": "Vivienth",
+        "description": "My freelancing project for a medical start-up was called Vivienth. I created the entire authentication and authorisation system, which includes several user roles like admin, doctor, etc. ",
+        "img": "/projects/vivienth.webp",
+        "technologies": [
+            "TypeScript",
+            "Node.js",
+            "React",
+            "MongoDB"
+        ]
+    },
+    {
+        "title": "Moodymoods",
+        "description": "This is a shopping website for art supplies built with NextJS and Django. You can shop your favourite art products on this website, add them to your wish list, add them to your cart, pre-pay for your orders using the Paytm payment portal, use coupons for discounts, and track your orders. You can register or login by logging in with Facebook or manually entering your information. It also has a gallery section where you can browse art images that are exclusively available on the website. I also made an admin panel where you can easily add products, product categories, coupons, manage orders, and upload images to the gallery.",
+        "link": "https://moodymoods.vercel.app/",
+        "img": "/projects/moodymoods.webp",
+        "technologies": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "React"
+        ]
+    }
+]
