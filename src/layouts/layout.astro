@@ -3,6 +3,7 @@ import Navbar from '@/components/layout/navbar.astro';
 import Footer from '@/components/layout/footer.astro';
 import { ClientRouter } from 'astro:transitions';
 import '@/styles/globals.css';
+import Contact from '@/components/layout/contact.astro';
 ---
 
 <!doctype html>
@@ -22,6 +23,8 @@ import '@/styles/globals.css';
             <Navbar />
 
             <slot />
+
+            <Contact />
         </main>
         <Footer />
     </body>

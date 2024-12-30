@@ -1,7 +1,17 @@
 [
     {
-        "title": "prisma-to-drizzle-query-transformer",
-        "description": "The PrismaToDrizzleTransformer is a utility that transforms Prisma query objects into Drizzle ORM query objects.",
+        "title": "@geetesh911/prisma-class-generator",
+        "description": "The prisma class generator is a utility that generates typescript classes from prisma schema.",
+        "links": {
+            "github": "https://github.com/geetesh911/prisma-class-generator",
+            "npm": "https://www.npmjs.com/package/@geetesh911/prisma-class-generator"
+        },
+        "forks": "0",
+        "stars": "1"
+    },
+    {
+        "title": "@geetesh911/prisma-to-drizzle-query-transformer",
+        "description": "The prisma to drizzle query transformer is a utility that transforms prisma query objects into drizzle ORM query objects.",
         "links": {
             "github": "https://github.com/geetesh911/prisma-helpers",
             "npm": "https://www.npmjs.com/package/@geetesh911/prisma-to-drizzle-query-transformer"

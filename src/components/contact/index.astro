@@ -1,0 +1,8 @@
+---
+import { ContactFormPopover } from './ui/contact-form-popover';
+import ContactForm from './ui/contact-form.astro';
+---
+
+<ContactFormPopover client:load>
+    <ContactForm slot={'form'} />
+</ContactFormPopover>
