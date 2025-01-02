@@ -1,0 +1,207 @@
+---
+title: 'The Design Pattern That Will Change Your Database Game Forever!'
+tags:
+    [
+        'design-patterns',
+        'database',
+        'software-engineering',
+        'software-architecture',
+        'repository-pattern',
+    ]
+cover: './images/cover/the-design-pattern-that-will-change-your-database-game-forever.png'
+date: '2024-10-15'
+author: 'Geetesh Laddha'
+authorImage: '../author/images/geetesh-laddha.webp'
+description: 'Are design patterns worth it? Do we gain something when we consciously try to implement them in our codebase or it just adds unnecessary complexity and make it hard to maintain?'
+---
+
+As codebases grow larger and older, making changes and implementing features becomes increasingly difficult without flexible and modular architecture. Design patterns offer an excellent solution to this challenge. While they may require more maintenance effort initially and add some boilerplate code for basic operations, their value depends on your project's size and specific needs. Rather than focusing on theoretical definitions of patterns, this article will provide practical approaches to implementing patterns that enhance code modularity and make future development easier.
+
+**NOTE:** If you want to learn more about conventional design patterns please check this out https://refactoring.guru/
+
+## Problem
+
+You were using [prisma](https://www.prisma.io/docs/orm) for both schema management and database querying. While Prisma handles queries and mutations through internal abstractions, this approach can slow down performance, particularly with relational queries and mutations. Although Prisma offers excellent developer experience and an intuitive schema definition language, its performance with relational queries remains a limitation. When dealing with a large production codebase, a complete migration isn't feasible—instead, we need to gradually implement an alternative ORM for handling relational queries efficiently.
+
+Here are the key requirements:
+
+1. We want to keep Prisma as our main database schema and migration tool.
+2. We want to use another ORM like Drizzle for relational queries, since it uses joins and processes SQL output directly (though Prisma offers this option too but with some internal Prisma magic).
+3. We want to implement this selectively in specific parts of the codebase rather than everywhere.
+
+The solution lies in the repository pattern, which uses an abstract class containing common methods like `create`, `update`, `find`, `findMany`, and similar operations. Model-specific repositories can be added when custom SQL operations are needed for particular models.
+
+The repository pattern offers two approaches to solve this problem. You can choose whichever best fits your project.
+
+### Approach-1
+
+First, create an abstract repository class that serves as an interface for ORM classes. Then implement specific logic for each ORM in child classes, which you can use wherever you need a particular ORM.
+
+Let's take an example
+
+```tsx
+export abstract class AbstractRepository {
+    abstract find(): void;
+    abstract findMany(): void;
+    abstract create(): void;
+    abstract createMany(): void;
+    abstract update(): void;
+    abstract upsert(): void;
+    abstract delete(): void;
+}
+```
+
+Now using this abstract class we will create the `PrismaRepository`
+
+```tsx
+export class PrismaRepository extends AbstractRepository {
+    find() {
+        console.log('PrismaRepository.find');
+    }
+    findMany() {
+        console.log('PrismaRepository.findMany');
+    }
+    create() {
+        console.log('PrismaRepository.create');
+    }
+    createMany() {
+        console.log('PrismaRepository.createMany');
+    }
+    update() {
+        console.log('PrismaRepository.update');
+    }
+    upsert() {
+        console.log('PrismaRepository.upsert');
+    }
+    delete() {
+        console.log('PrismaRepository.delete');
+    }
+}
+```
+
+Next, we'll create another class called `DrizzleRepository`
+
+```tsx
+export class DrizzleRepository extends AbstractRepository {
+    find() {
+        console.log('DrizzleRepository.find');
+    }
+    findMany() {
+        console.log('DrizzleRepository.findMany');
+    }
+    create() {
+        console.log('DrizzleRepository.create');
+    }
+    createMany() {
+        console.log('DrizzleRepository.createMany');
+    }
+    update() {
+        console.log('DrizzleRepository.update');
+    }
+    upsert() {
+        console.log('DrizzleRepository.upsert');
+    }
+    delete() {
+        console.log('DrizzleRepository.delete');
+    }
+}
+```
+
+```tsx
+export class ProductRepository extends AbstractRepository {
+    // Add the logic to let abstract class know which schema to use
+    schema = 'product';
+}
+export class UserRepository extends AbstractRepository {
+    // Add the logic to let abstract class know which schema to use
+    schema = 'user';
+}
+
+const userRepository = new UserRepository();
+const users = userRepository.create();
+
+const productRepository = new ProductRepository();
+const products = productRepository.find();
+```
+
+Now different parts of your application can create model-specific repositories based on their needs. For instance, you might use Prisma for the `User` model but prefer Drizzle for the `Product` model when dealing with relational queries. This is achieved by extending `ProductRepository` from `DrizzleRepository` and `UserRepository` from `PrismaRepository`, giving you the flexibility to choose the most appropriate ORM for each model.
+
+This approach implements the [Strategy](https://refactoring.guru/design-patterns/strategy) pattern, where `AbstractRepository` acts as an interface, while `PrismaRepository` and `DrizzleRepository` serve as strategies containing ORM-specific logic.
+
+### Approach 2
+
+The above solution addresses a key challenge: integrating multiple ORMs (e.g., Prisma and Drizzle ORM) in a single codebase. This approach allows Prisma to handle schema and migrations along with simpler queries while leveraging Drizzle ORM for more complex relational queries. However, simply splitting tasks between two ORMs introduces maintenance challenges for large codebases, especially if developers need to modify repository classes to explicitly use different ORMs in various places.
+
+To resolve this, we can use a more seamless strategy by introducing an **abstract repository class** that implements basic database operations like `find`, `create`, `update`, etc. This class acts as a foundation, and specific repository classes for individual models can extend it to add model-specific methods, if necessary. The choice of ORM is abstracted within the abstract repository class, utilizing the **Adapter Pattern** to provide a consistent API for database communication across the application. This ensures compatibility and isolates ORM-specific logic from the main codebase.
+
+For instance, if you prefer Prisma's intuitive API for developer convenience but rely on Drizzle ORM for optimized query performance, you can create an adapter to bridge the two. My package, [`@geetesh911/prisma-to-drizzle-query-transformer`](https://www.npmjs.com/package/@geetesh911/prisma-to-drizzle-query-transformer), demonstrates this concept by converting Prisma syntax into Drizzle-compatible queries.
+
+Here's an example implementation:
+
+```tsx
+export abstract class AbstractRepository {
+    find(prismaFindArgs) {
+        // PrismaToDrizzleTransformer acts as an adapter which provides compatibilty between prisma and drizzle syntax
+        const drizzleQuery = new PrismaToDrizzleTransformer(myDrizzleModel).transformQuery(
+            prismaFindArgs,
+        );
+
+        return this.drizzleClient.query.users.findMany(drizzleQuery);
+    }
+    create() {
+        console.log('Prisma.create');
+    }
+    createMany() {
+        console.log('Prisma.createMany');
+    }
+    update() {
+        console.log('Prisma.update');
+    }
+    upsert() {
+        console.log('Prisma.upsert');
+    }
+    delete() {
+        console.log('Prisma.delete');
+    }
+}
+
+export class ProductRepository extends AbstractRepository {
+    // Add the logic to let abstract class know which schema to use
+    schema = 'product';
+}
+export class UserRepository extends AbstractRepository {
+    // Add the logic to let abstract class know which schema to use
+    schema = 'user';
+}
+
+const userRepository = new UserRepository();
+const users = userRepository.create();
+
+const productRepository = new ProductRepository();
+const products = productRepository.find();
+```
+
+### Key Benefits of This Approach
+
+1. **Seamless Integration**: You can easily define which ORM to use for each operation within the abstract repository class.
+2. **Consistent API**: The Adapter Pattern ensures that database operations use the same API throughout the codebase, avoiding the need for widespread refactoring when switching ORMs.
+3. **Flexibility**: You can extend this setup to support additional ORMs or tailor operations for specific use cases.
+4. **Isolation of Concerns**: Database logic is confined to repository classes, making the codebase easier to maintain and debug.
+
+### Notes
+
+- If you need to handle some queries using Prisma directly, you can modify the logic within the abstract `find` method to decide on the ORM based on method arguments or context.
+- If the chosen ORM returns data in a different format, you can add a **serializer** to normalize the output, ensuring consistency across the application.
+- **Caution**: The code shown in this article is just for explanation purposes, it should not be used directly in a production app.
+
+### Closing Thoughts
+
+This approach combines the **Strategy Pattern** and **Adapter Pattern** to create a flexible, maintainable solution for integrating multiple ORMs. It prevents vendor lock-in, supports performance optimizations, and maintains compatibility with the existing codebase.
+
+I'll share more practical solutions like this in upcoming parts of this series. The next article I plan is about implementing database authorization at the code level in typescript using the decorator pattern. Stay tuned!!!
+
+If you found this helpful or have alternative ideas, please share your feedback or connect with me on [LinkedIn](https://www.linkedin.com/in/geetesh-laddha/). Let’s have a great discussion!
+
+Cheers! 🍻
+
+Have a wonderful day!

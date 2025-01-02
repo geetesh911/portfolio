@@ -34,4 +34,7 @@
     pre code {
         @apply bg-transparent;
     }
+    a {
+        @apply text-blue-500 hover:underline;
+    }
 }

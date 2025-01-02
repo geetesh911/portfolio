@@ -85,8 +85,13 @@ const Card = ({ img, title, description, link }: Project) => {
     );
 };
 
-export const ProjectCards = () => {
-    const items = projects.map((item) => ({
+interface ProjectCardsProps {
+    limit?: number;
+}
+
+export const ProjectCards = ({ limit }: ProjectCardsProps) => {
+    const projectsData = limit ? projects.slice(0, limit) : projects;
+    const items = projectsData.map((item) => ({
         title: item.title,
         link: item.link,
         component: <Card {...item} />,

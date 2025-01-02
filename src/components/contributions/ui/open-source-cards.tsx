@@ -49,8 +49,13 @@ const Card = ({ title, description, forks, stars }: Contribution) => {
     );
 };
 
-export const OpenSourceCards = () => {
-    const items = contributions.map((item) => ({
+interface OpenSourceCardsProps {
+    limit?: number;
+}
+
+export const OpenSourceCards = ({ limit }: OpenSourceCardsProps) => {
+    const contributionsData = limit ? contributions.slice(0, limit) : contributions;
+    const items = contributionsData.map((item) => ({
         title: item.title,
         link: item.links.github,
         component: <Card {...item} />,
