@@ -1,13 +1,13 @@
 [
     {
-        "title": "@geetesh911/prisma-class-generator",
-        "description": "The prisma class generator is a utility that generates typescript classes from prisma schema.",
+        "title": "reacty-form",
+        "description": "Performant, flexible and extensible forms library for React Hooks (inspired by react-hook-form) using Legend State",
         "links": {
-            "github": "https://github.com/geetesh911/prisma-class-generator",
-            "npm": "https://www.npmjs.com/package/@geetesh911/prisma-class-generator"
+            "github": "https://github.com/geetesh911/reacty-form",
+            "npm": "https://www.npmjs.com/package/reacty-form"
         },
         "forks": "0",
-        "stars": "1"
+        "stars": "4"
     },
     {
         "title": "@geetesh911/prisma-to-drizzle-query-transformer",
@@ -15,6 +15,16 @@
         "links": {
             "github": "https://github.com/geetesh911/prisma-helpers",
             "npm": "https://www.npmjs.com/package/@geetesh911/prisma-to-drizzle-query-transformer"
+        },
+        "forks": "0",
+        "stars": "1"
+    },
+    {
+        "title": "@geetesh911/prisma-class-generator",
+        "description": "The prisma class generator is a utility that generates typescript classes from prisma schema.",
+        "links": {
+            "github": "https://github.com/geetesh911/prisma-class-generator",
+            "npm": "https://www.npmjs.com/package/@geetesh911/prisma-class-generator"
         },
         "forks": "0",
         "stars": "1"
