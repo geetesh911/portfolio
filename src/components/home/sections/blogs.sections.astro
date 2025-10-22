@@ -1,13 +1,10 @@
 ---
 import BlogCard from '@/components/blogs/ui/blog-card.astro';
-import { getCollection } from 'astro:content';
 import about from '@/data/about.json';
+import { fetchMediumBlogs } from '@/components/blogs/utils/fetch-medium-blogs';
 
-const allBlogs = (await getCollection('blog')).sort((a, b) => {
-    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-});
-
-const homePageBlogs = allBlogs.slice(0, 2);
+const mediumBlogs = await fetchMediumBlogs();
+const homePageBlogs = mediumBlogs.slice(0, 2);
 ---
 
 <div class="max-w-5xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-20 md:mt-40">

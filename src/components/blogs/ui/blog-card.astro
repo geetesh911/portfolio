@@ -1,21 +1,19 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { Blog } from '../types/blog.type';
 
 interface Props {
-    blog: CollectionEntry<'blog'>;
+    blog: Blog;
 }
 
-const {
-    data: { title, description, date },
-    id,
-} = Astro.props.blog;
+const { title, description, date, link } = Astro.props.blog;
 ---
 
-<a class="relative p-8 hover:bg-zinc-700/40 rounded-3xl transition-all" href={`/blogs/${id}`}>
+<a class="relative p-8 hover:bg-zinc-700/40 rounded-3xl transition-all" href={link}>
     <div class="relative z-50">
         <small class="md:border-l md:border-zinc-500 md:pl-4 text-zinc-400 block">
             {
-                date.toLocaleDateString('en-US', {
+                new Date(date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
@@ -24,7 +22,7 @@ const {
         </small>
         <h2 class="text-zinc-200 font-bold text-xl mt-4">{title}</h2>
         <p class="text-zinc-400 font-normal text-sm mt-4 leading-loose max-w-4xl">
-            {description}
+            {description.split('\n')[0]}
         </p>
         <p class="text-cyan-500 text-sm mt-6 block">Read More</p>
     </div>
