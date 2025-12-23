@@ -1,36 +1,82 @@
 [
     {
-        "title": "4Medica",
-        "description": "Developed healthcare applications using Typescript, React.js, Node.js/NestJS, MongoDB, FHIR, Elasticsearch, Kafka, gRPC, Redis, and Angular. Built lab order management system connecting healthcare providers, facilities, and patients. Implemented patient data management system across multiple applications. Developed user and organization management solutions for healthcare platforms",
-        "link": "https://github.com/geetesh911/incoguzz",
+        "title": "NABIS - Cannabis Wholesale Platform",
+        "description": "Led engineering for mission-critical Compliance and Financial verticals at Nabis, the leading cannabis wholesale platform. Architected the automated 'Compliance Service' tracking complete product lifecycle (Farm-to-Consumer), reducing manual compliance operations by 90%. Engineered real-time integrations with state-mandated compliance providers ensuring 100% regulatory adherence. Orchestrated P0 critical migration of financial service modules from Legacy to Modern architecture with zero downtime. Developed consolidated 'Payment Dashboard' aggregating complex order and payment data for real-time financial insights.",
+        "link": "",
+        "img": "/projects/nabis.webp",
+        "technologies": [
+            "NestJS",
+            "Kafka",
+            "Elasticsearch",
+            "TypeScript",
+            "Microservices",
+            "Event-Driven Architecture"
+        ]
+    },
+    {
+        "title": "4Medica (Sorice Solutions) - Healthcare Platform",
+        "description": "Architected and deployed scalable, HIPAA-compliant healthcare solutions streamlining communication between medical professionals, labs, and patients. Built robust 'Order Editing Module' reducing modification turnaround by 70% (10m to 3m) with strict FHIR standard implementation. Led strategic migration of FHIR store from Google Healthcare API to Aidbox, reducing infrastructure costs by ~30%. Designed high-throughput catalog service using Elasticsearch for thousands of lab tests. Engineered multi-tenant user management system for complex organizational hierarchies.",
+        "link": "",
         "img": "/projects/4medica.webp",
         "technologies": [
-            "Angular",
-            "Node.js",
             "NestJS",
+            "Node.js",
+            "Angular",
             "MongoDB",
-            "Elastic Search",
+            "Elasticsearch",
             "Kafka",
+            "gRPC",
             "FHIR",
+            "Redis",
             "TypeScript"
         ]
     },
     {
-        "title": "PillarPlus",
-        "description": "I have written several modules and algorithms at PillarPlus to solve complex MEP problems. I've also worked with several libraries that deal with geometry, graph and canvas to provide users with a real-time experience. At Towercop (a PillarPlus subsidiary), I worked on complex forms designs, form builder, data structuring, analytics, and other related things.",
-        "link": "https://github.com/geetesh911/incoguzz",
+        "title": "PillarPlus & Towercop - MEP Engineering Automation",
+        "description": "Spearheaded architecture and development of core algorithmic engines and complex frontend interfaces automating MEP (Mechanical, Electrical, Plumbing) engineering workflows. Developed 'External Drainage Module' compressing design lifecycle from 2 weeks to 3 hours. Engineered real-time visualization modules using advanced geometry, graph, and canvas libraries, reducing user design time by 98% (3 days to 1.5 hours). Built calculation engine automating 6-hour manual process to under 10 minutes. Led end-to-end development of dynamic Form Builder and analytics engine at Towercop subsidiary.",
+        "link": "",
         "img": "/projects/pillarplus.webp",
         "technologies": [
-            "React Native",
+            "TypeScript",
+            "React",
+            "NextJS",
             "Node.js",
             "NestJS",
             "PostgreSQL",
+            "MongoDB",
+            "Redis"
+        ]
+    },
+    {
+        "title": "JiviAI - AI-Powered Sales Training SaaS",
+        "description": "Architected multi-tenant SaaS platform enabling companies to onboard and train sales teams at scale. Engineered real-time AI Voice Assistant acting as 'prospect customer' conducting role-play scenarios to train representatives dynamically. Built complete backend infrastructure (NestJS/PostgreSQL) handling multi-organization data isolation and user management. Delivered scalable architecture that accelerated business funding rounds.",
+        "link": "",
+        "img": "/projects/jivi.webp",
+        "technologies": [
+            "NestJS",
+            "PostgreSQL",
+            "TypeScript",
+            "Node.js",
+            "AI/ML",
+            "Microservices"
+        ]
+    },
+    {
+        "title": "Vivienth - Telemedicine & Diagnosis Platform",
+        "description": "Developed HIPAA-compliant backend facilitating full patient care lifecycle from initial digital assessment to diagnosis and treatment planning. Built Doctor's Portal dashboard allowing providers to review automated diagnostic reports, approve treatment plans, and digitally prescribe medications. Streamlined communication loop between patients and providers ensuring secure and efficient data transmission. Implemented rapid go-to-market solution enabling faster customer acquisition.",
+        "link": "",
+        "img": "/projects/vivienth.webp",
+        "technologies": [
+            "NestJS",
+            "PostgreSQL",
+            "React",
+            "Node.js",
             "TypeScript"
         ]
     },
     {
-        "title": "Incoguzz",
-        "description": "Using the social media app Incoguzz, you may chat with random users and post images, videos, audio, and text. You can connect with people randomly or you can connect with specific people using their username. In the same format, I also intend to include audio and video calls.",
+        "title": "Incoguzz - An Anonymous Social Media Platform",
+        "description": "Social media app enabling users to chat with random users and post images, videos, audio, and text. Connect with people randomly or with specific users via username. Built with modern tech stack for real-time communication and media sharing.",
         "link": "https://github.com/geetesh911/incoguzz",
         "img": "/projects/incoguzz.webp",
         "technologies": [
@@ -39,29 +85,6 @@
             "NestJS",
             "PostgreSQL",
             "TypeScript"
-        ]
-    },
-    {
-        "title": "Vivienth",
-        "description": "My freelancing project for a medical start-up was called Vivienth. I created the entire authentication and authorisation system, which includes several user roles like admin, doctor, etc. ",
-        "img": "/projects/vivienth.webp",
-        "technologies": [
-            "TypeScript",
-            "Node.js",
-            "React",
-            "MongoDB"
-        ]
-    },
-    {
-        "title": "Moodymoods",
-        "description": "This is a shopping website for art supplies built with NextJS and Django. You can shop your favourite art products on this website, add them to your wish list, add them to your cart, pre-pay for your orders using the Paytm payment portal, use coupons for discounts, and track your orders. You can register or login by logging in with Facebook or manually entering your information. It also has a gallery section where you can browse art images that are exclusively available on the website. I also made an admin panel where you can easily add products, product categories, coupons, manage orders, and upload images to the gallery.",
-        "link": "https://moodymoods.vercel.app/",
-        "img": "/projects/moodymoods.webp",
-        "technologies": [
-            "Python",
-            "Django",
-            "PostgreSQL",
-            "React"
         ]
     }
 ]

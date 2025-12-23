@@ -30,53 +30,52 @@
     "workExperience": [
         {
             "name": "Nabis",
-            "logo": "/images/logos/apple.png",
+            "logo": "/images/logos/nabis.png",
             "period": "Nov 2024 - Present",
-            "location": "Remote",
+            "location": "United States (Remote)",
             "role": "Senior Software Engineer",
             "achievements": [
-                "Worked on the core team that built the compliance and logistics platform for cannabis distribution",
-                "Solved complex problems related to inventory management, order processing, and compliance reporting",
-                "Developed scalable solutions using Typescript, React.js, Node.js, NestJS, MongoDB, Elasticsearch, Kafka, gRPC, Redis, and Angular"
+                "Architected 'Compliance Service' (NestJS/Kafka) tracking Farm-to-Consumer lifecycles, automating government reporting and reducing manual operations by 90%",
+                "Engineered real-time integrations with state providers ensuring 100% regulatory adherence",
+                "Orchestrated financial migration (Legacy to V2) with zero downtime",
+                "Developed 'Payment Dashboard' using Elasticsearch for real-time financial insights"
             ]
         },
         {
-            "name": "Sorice Solutions",
-            "logo": "/images/logos/apple.png",
-            "period": "Jan 2023 - Nov 2024",
+            "name": "Sorice Solutions (4Medica)",
+            "logo": "/images/logos/4medica.png",
+            "period": "Jan 2023 - Oct 2024",
             "location": "Remote",
             "role": "Senior Software Engineer",
             "achievements": [
-                "Developed healthcare applications using Typescript, React.js, Node.js/NestJS, MongoDB, FHIR, Elasticsearch, Kafka, gRPC, Redis, and Angular",
-                "Built lab order management system connecting healthcare providers, facilities, and patients",
-                "Implemented patient data management system across multiple applications",
-                "Developed user and organization management solutions for healthcare platforms"
+                "Architected FHIR-compliant Order Editing Module reducing turnaround by 70% (10 minutes to 3 minutes)",
+                "Led FHIR store migration from Google Healthcare API to Aidbox, reducing costs by 30%",
+                "Designed high-throughput catalog service using Elasticsearch for thousands of lab tests",
+                "Engineered multi-tenant user management for complex organizational hierarchies"
             ]
         },
         {
             "name": "PillarPlus",
-            "logo": "/images/logos/apple.png",
+            "logo": "/images/logos/pillarplus.png",
             "period": "July 2020 - Dec 2022",
-            "location": "Remote",
+            "location": "Jaipur, India",
             "role": "Full Stack JavaScript Developer",
             "achievements": [
-                "Developed algorithms for complex MEP (Mechanical, Electrical, Plumbing) solutions using Typescript, React.js, Next.js, Node.js, Postgres, MongoDB, Redis and ",
-                "Implemented real-time geometry and graphics solutions using graph and canvas libraries",
-                "Designed complex form builders and analytics systems at Towercop",
-                "Led development teams and provided architectural guidance for multiple applications",
-                "Managed code quality and technical decision-making across projects"
+                "Developed 'External Drainage Module', compressing design lifecycle from 2 weeks to 3 hours",
+                "Engineered real-time visualization modules reducing design time by 98% (3 days to 1.5 hours)",
+                "Built calculation engine automating 6-hour manual process to <10 minutes",
+                "Led development of dynamic Form Builder and analytics engine, and integrated complex workflows at Towercop"
             ]
         },
         {
             "name": "Freelance",
-            "logo": "/images/logos/apple.png",
+            "logo": "/images/logos/freelance.png",
             "period": "Nov 2019 - July 2020",
             "location": "Remote",
-            "role": "Senior Software Engineer",
+            "role": "Full Stack Engineer",
             "achievements": [
-                "Developed MVPs using Node.js, React.js, NestJS, and PostgreSQL stack",
-                "Built scalable applications that accelerated business funding rounds",
-                "Implemented rapid go-to-market solutions enabling faster customer acquisition"
+                "Architected multi-tenant AI Sales SaaS with real-time AI Voice Assistant (NestJS/PostgreSQL)",
+                "Developed HIPAA-compliant telemedicine platform with automated diagnostics and e-prescriptions"
             ]
         }
     ]
