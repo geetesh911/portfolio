@@ -101,7 +101,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
                         </ul>
                         <div className="mt-8 border-t border-zinc-700/50 pt-8">
                             <a
-                                href="/resume.pdf"
+                                href="/Geetesh_Resume_Senior_Engineer.pdf"
                                 target="_blank"
                                 onClick={() => setIsOpen(false)}
                                 className="inline-flex items-center rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-zinc-700"
